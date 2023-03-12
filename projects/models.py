@@ -27,8 +27,10 @@ class Project(models.Model):
     category = models.ForeignKey(Category, on_delete=models.PROTECT)#العلاقة واحد الى كثيرالنموزج Category
     user = models.ForeignKey(
         AUTH_USER_MODEL,
-        on_delete=models.CASCADE)#نصرح عن العلاقة بين النموزج والمشروع لكن لسنا بحاجة للتعريف ب الuser فعليا حيث يقدم لنا django لنا ذلك ذلم بشكل ضمني 
-    
+        on_delete=models.CASCADE,#نصرح عن العلاقة بين النموزج والمشروع لكن لسنا بحاجة للتعريف ب الuser فعليا حيث يقدم لنا django لنا ذلك ذلم بشكل ضمني 
+         null=True
+        )
+        
      
      
     def __str__(self):# هذه الدالة str تنعيد لنا النتيجة عند تحويل الصنف الى سلسة نصية
