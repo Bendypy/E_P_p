@@ -3,7 +3,7 @@
     <h3>{% trans 'computer parts' %}</h3>{#يستعمل الوسم `{%trans%}` في جانغو لطباعة الترجمة النصية الموافقة للمعامل الممرر عبرها#}
     <ul>
        {% for project in object_list %}{#عندما نستخدم واجهة (view) مشتقة من الصنف ListView سيكون لدينا متحول خاص باسم object_list يمكننا استخدامه في الـ template الخاص بهذه الواجهة، يقوم بتخزين قائمة عناصر المودل من قاعدة البيانات الذي يعتمد عليه هذا الـ ListView.#}
-            <li>{{ project.title }}</li>
+            <li>{{ project.title }}  <a href="{% url 'Project_update' project.id %}">Edit</a></li>
         {% empty %}
             <li>{% trans 'There are no parts to display' %}</li>
         {% endfor %}

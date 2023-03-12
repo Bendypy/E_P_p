@@ -1,0 +1,33 @@
+{% load i18n %}
+
+<ul>{#عرفنا قائمة#}
+    {% for task in project.task_set.all %}{#لدينا حلقة for للمرور على المهام #}{#واحد على جميع هنا العلاقة #}
+       <li>
+            <form method="post" action="{% url 'Task_update' task.id %}">
+                {% csrf_token %} 
+                <input
+                    type="checkbox" 
+                    name="is_completed"
+                    {% if task.is_completed %} checked {% endif %}
+                    onchange="this.form.submit()"
+
+                />
+       {#  هنا طبعنا وصف المهمة ضمن الحلقة#}
+                {{ task.description }}
+            </form>
+            <form method="post" action="{% url 'Task_delete' task.id %}">
+                {% csrf_token %} 
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    {% endfor %}
+
+</ul>   
+
+{#هنا  نقوم باضفة استمارة انشاء مهمة #}
+<form method="post" action="{% url 'Task_create' %}">{#action  رابط او عنوان انشاء مهمة #}
+    {% csrf_token %} 
+    <input type="hidden"  value="{{ project.id }}" name="project">{#هنا نقوم باحتواء id المشورع#}
+    <input type="text"  name="description" placeholder="{% trans 'New Task' %}" />{#لكتابة وصف المهمة#}
+    <input type="submit" value="{% trans 'Add' %}" />
+</form>
