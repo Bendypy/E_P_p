@@ -42,14 +42,13 @@
                             <i class="bi bi-trash"></i>
                             {% trans 'Delete' %}
                         </button>
-
                     </div>
                 </div>
             </div>
         </form>
     </div>
-    <div class=col-md-9>
-        {% include 'project/task.html' with project=object %}
+    <div class="col-md-9">
+            {% include 'project/task.html' with project=object %}
+        </div>
     </div>
-</div>
 {% endblock %} 

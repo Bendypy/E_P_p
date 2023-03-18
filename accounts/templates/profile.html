@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% load i18n %}
 
@@ -6,7 +7,7 @@
     <div class="d-flex justify-content-center">
         <div class="card  col-md-5 mb-2">
             <div   div class="card-header text-center">
-                <h3 class="mb-0 py-2">{% trans "Login" %}</h3>
+                <h3 class="mb-0 py-2">{% trans "Profile" %}</h3>
             </div>
             <div class="card-body">
                 <div class="form-group">
@@ -14,7 +15,7 @@
                         {% csrf_token %}
                         {% include 'common/form.html' with form=form %} 
                         <div class="d-grid gab-2">
-                            <button class="btn btn-success btn-block">{% trans "Login" %}</button>
+                            <button class="btn btn-success btn-block">{% trans "Save" %}</button>
                         </div>
                     </form>
                 </div>

@@ -6,7 +6,7 @@
             <form method="post" action="{% url 'Task_update' task.id %}"class="my-auto me-2">
                 {% csrf_token %} 
                 <input
-                    class="form-check-input"
+                    class="form-check-control"
                     type="checkbox" 
                     name="is_completed"
                     {% if task.is_completed %} checked {% endif %}
