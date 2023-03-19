@@ -13,9 +13,10 @@
                     <form method="POST">
                         {% csrf_token %}
                         {% include 'common/form.html' with form=form %} 
-                        <div class="d-grid gab-2">
-                            <button class="btn btn-success btn-block">{% trans "Login" %}</button>
-                        </div>
+                        <button class="btn btn-success btn-block">
+                            {% trans "Login" %}
+                        </button>
+                        
                     </form>
                 </div>
             </div>

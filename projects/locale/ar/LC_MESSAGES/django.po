@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-19 23:22+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: .\projects\forms.py:12
+msgid "Category"
+msgstr "التصنيف"
+
+#: .\projects\forms.py:13
+msgid "Title"
+msgstr "العنوان"
+
+#: .\projects\forms.py:14
+msgid "Description"
+msgstr "الوصف"
+
+#: .\projects\models.py:15
+msgid "Pending"
+msgstr "قيد  التنفيذ"
+
+#: .\projects\models.py:16
+msgid "Completed"
+msgstr "مكتمل"
+
+#: .\projects\models.py:17
+msgid "postponed"
+msgstr "معلق"
+
+#: .\projects\models.py:18
+msgid "Canceled"
+msgstr "ملغي"
+
+#: .\projects\templates\partials\footer.html:5
+msgid "(c) 2023 ipo. ALL rights reserved."
+msgstr " جميع الحقوق محفوظة. bendy 2023"
+
+#: .\projects\templates\partials\header.html:5
+msgid "Time management for worship in Ramadan"
+msgstr "تنظيم وقت العبادة في رمضان"
+
+#: .\projects\templates\partials\header.html:13
+msgid "Home"
+msgstr "الرئيسية"
+
+#: .\projects\templates\partials\header.html:23
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: .\projects\templates\partials\header.html:25
+msgid " Logout"
+msgstr "تسجيل الخروج"
+
+#: .\projects\templates\partials\header.html:35
+msgid "Search"
+msgstr "بحث"
+
+#: .\projects\templates\partials\header.html:45
+msgid "Register"
+msgstr "حساب جديد"
+
+#: .\projects\templates\partials\header.html:48
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: .\projects\templates\project\create.html:8
+#: .\projects\templates\project\list.html:12
+#: .\projects\templates\project\list.html:55
+msgid "New Worship"
+msgstr "عبادة جديدة"
+
+#: .\projects\templates\project\create.html:16
+msgid "Create"
+msgstr "انشاء"
+
+#: .\projects\templates\project\delete.html:4
+msgid "Alert"
+msgstr "تنبيه"
+
+#: .\projects\templates\project\delete.html:8
+msgid "Are you sure to delete"
+msgstr "هل أنت متأكد من أنك تريد الحذف"
+
+#: .\projects\templates\project\delete.html:10
+#: .\projects\templates\project\update.html:43
+msgid "Delete"
+msgstr "حذف"
+
+#: .\projects\templates\project\list.html:9
+msgid "My Worship"
+msgstr "عباداتي"
+
+#: .\projects\templates\project\list.html:38
+msgid "Edit"
+msgstr "تعديل"
+
+#: .\projects\templates\project\list.html:50
+msgid "Ther are no worship to show"
+msgstr "لا توجد اي عبادة لعرضها"
+
+#: .\projects\templates\project\list.html:67
+#: .\projects\templates\project\list.html:72
+msgid "Previous"
+msgstr "السابق"
+
+#: .\projects\templates\project\list.html:78
+#: .\projects\templates\project\list.html:83
+msgid "Next"
+msgstr "التالي"
+
+#: .\projects\templates\project\task.html:36
+msgid "New Task"
+msgstr "مهمة جديدة"
+
+#: .\projects\templates\project\task.html:37
+msgid "Add"
+msgstr "إضافة"
+
+#: .\projects\templates\project\update.html:39
+msgid "Save"
+msgstr "حفظ"

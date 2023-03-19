@@ -25,8 +25,8 @@
                     {% endfor %}
                     <div class="d-flex mt-2">
                         <span class= "me-auto text-muted small">
-                            <i class="bi bi-plus-lg "></i>
-                            <time datetime="{{  object.created_at}}">
+                            <i class="bi bi-clock"></i>
+                            <time datetime="{{  object.created_at }}">
                                 {{ object.created_at|naturaltime }}
                             </time>
                         </span>
@@ -38,10 +38,10 @@
                             <i class="bi bi-save"></i>
                             {% trans 'Save' %}
                         </button>
-                        <button class="btn btn-danger">
+                        <a href="{% url 'Project_delete' project.id %}" class="btn btn-danger">
                             <i class="bi bi-trash"></i>
                             {% trans 'Delete' %}
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -52,3 +52,4 @@
         </div>
     </div>
 {% endblock %} 
+

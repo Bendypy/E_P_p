@@ -1,23 +1,25 @@
 from django.db import models
 from django.conf.global_settings import AUTH_USER_MODEL
+from django.utils.translation import gettext as _
 # Create your models here.
+#الافضل البدء بل الكيانات التي لا تمتلك حقول  علاقات ضمنها
 #اذا نعرف صنف جديد يدعى 
 class Category(models.Model): #هذا الصنف يرث من الصنق (models.Modles
     name = models.CharField(max_length=255)#الطول الاعظمي 255)#  احد حقول النموزج هذا الحقل اسم النموزج
     
-    def __str__(self):# هذه الدالة str تنعيد لنا النتيجة عند تحويل الصنف الى سلسة نصية
+    def __str__(self):# هذه الدالة str تعيد لنا النتيجة عند تحويل الصنف الى سلسة نصية
         return self.name# يمكن ان نعيد الخاصية name الى سلسلة نصية
     
     
 class ProjectStatus(models.IntegerChoices):# نموزج مساعد  
-    PENDING = 1, 'Pending'
-    COMPLETED = 2, 'Completed'
-    POSTPONED = 3, 'postponed'
-    CANCELED = 4, 'Canceled'
-
+    PENDING = 1, _('Pending')# المشروع  قيد التنفيذ
+    COMPLETED = 2, _ ('Completed') # اكتمل
+    POSTPONED = 3, _ ('postponed')# موجل
+    CANCELED = 4, _ ('Canceled')# الملغا
+#النموزج الثاني
 class Project(models.Model):
-    title = models.CharField(max_length=255)
-    description = models.TextField()
+    title = models.CharField(max_length=255)#  خاصية  المشروعtitle والحقل CharField
+    description = models.TextField()#الحقل الثاني الحقل الخاص بوصف المشروع ونواع الحقل  TextField
     status = models.IntegerField(#حقل يعبر عن الحالة من النوع int
         choices=ProjectStatus.choices,
         default=ProjectStatus.PENDING

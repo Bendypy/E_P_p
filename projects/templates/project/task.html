@@ -3,10 +3,10 @@
 <ul class="list-group">{#عرفنا قائمة#}
     {% for task in project.task_set.all %}{#لدينا حلقة for للمرور على المهام #}{#واحد على جميع هنا العلاقة #}
         <li class="list-group-item d-flex">
-            <form method="post" action="{% url 'Task_update' task.id %}"class="my-auto me-2">
+            <form method="post" action="{% url 'Task_update' task.id %}" class="my-auto me-2">
                 {% csrf_token %} 
                 <input
-                    class="form-check-control"
+                    class="form-check-input"
                     type="checkbox" 
                     name="is_completed"
                     {% if task.is_completed %} checked {% endif %}
@@ -15,7 +15,7 @@
                 />    
             </form>
             <p class="my-auto me-auto">
-                {{ task.description }}
+                {{ task.description }}{#وصف  المهمة#}
             </p>
             <form method="post" action="{% url 'Task_delete' task.id %}">
                 {% csrf_token %} 
@@ -27,17 +27,17 @@
 </ul> 
 
 <div class="card my-2">
+    <div class="card-body">
    {#هنا  نقوم باضفة استمارة انشاء مهمة #}
-    <form method="post" action="{% url 'Task_create' %}" class="d-flex">{#action  رابط او عنوان انشاء مهمة #}
-        {% csrf_token %} 
-        <div class="input-group">
-            <input type="hidden"  value="{{ project.id }}" name="project">{#هنا نقوم باحتواء id المشورع#}
-            <input type="text"  name="description" class="form-control" placeholder="{% trans 'New Task' %}" required/>{#لكتابة وصف المهمة#}
-            <input type="submit" class="btn btn-outline-dark" value="{% trans 'Add' %}" />
-        </div>  
-    </form>
-
-
+        <form method="POST" action="{% url 'Task_create' %}" class="d-flex">{#action  رابط او عنوان انشاء مهمة #}
+            {% csrf_token %} 
+            <div class="input-group">
+                <input type="hidden"  value="{{ project.id }}" name="project"/>{#هنا نقوم باحتواء id المشورع#}
+                <input type="text"  name="description" class="form-control" placeholder="{% trans 'New Task' %}" required/>{#لكتابة وصف المهمة#}
+                <button  class="btn btn-outline-dark" type="submit"> {% trans 'Add' %}</button>
+            </div>  
+        </form>
+    </div>
 </div>
 
 
