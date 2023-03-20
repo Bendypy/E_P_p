@@ -10,6 +10,10 @@ class Category(models.Model): #هذا الصنف يرث من الصنق (models.
     def __str__(self):# هذه الدالة str تعيد لنا النتيجة عند تحويل الصنف الى سلسة نصية
         return self.name# يمكن ان نعيد الخاصية name الى سلسلة نصية
     
+class  Meta:
+    verbose_name = _('Category')    
+    
+    
     
 class ProjectStatus(models.IntegerChoices):# نموزج مساعد  
     PENDING = 1, _('Pending')# المشروع  قيد التنفيذ

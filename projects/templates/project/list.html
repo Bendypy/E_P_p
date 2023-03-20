@@ -6,10 +6,10 @@
    
 
     <div class="d-flex">
-        <h3 class="me-auto">{% trans 'My Worship' %}</h3>
+        <h3 class="me-auto">{% trans 'my times' %}</h3>
         <div>
             <a href="{% url 'Project_create' %}" class="btn btn-outline-success">
-                <i class="bi bi-plus-lg "></i> {% trans 'New Worship' %}
+                <i class="bi bi-plus-lg "></i> {% trans 'Create a new time' %}
             </a>
         </div>
     </div>
@@ -47,12 +47,12 @@
         {% empty %}
             <div class="col-md-12">
                 <div class="h-100 p-5 bg-white border rounded-3 text-center">
-                    <p>{% trans 'Ther are no worship to show' %}</p>
+                    <p>{% trans 'No time has been set aside to display it' %}</p>
                     <p>
                         <i class="bi bi-emoji-frown fs-1"></i>
                     </p>
                     <a href="{% url 'Project_create' %}"class="btn btn-outline-success">
-                        <i class="bi bi-plus-lg "></i> {% trans 'New Worship' %}
+                        <i class="bi bi-plus-lg "></i> {% trans 'Create a new time' %}
                     </a>
                 </div>
             </div>

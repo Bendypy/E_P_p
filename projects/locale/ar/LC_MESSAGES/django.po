@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-19 23:22+0300\n"
+"POT-Creation-Date: 2023-03-20 21:06+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\projects\forms.py:12
+#: .\projects\forms.py:12 .\projects\models.py:14
 msgid "Category"
 msgstr "التصنيف"
 
@@ -31,19 +31,19 @@ msgstr "العنوان"
 msgid "Description"
 msgstr "الوصف"
 
-#: .\projects\models.py:15
+#: .\projects\models.py:19
 msgid "Pending"
 msgstr "قيد  التنفيذ"
 
-#: .\projects\models.py:16
+#: .\projects\models.py:20
 msgid "Completed"
 msgstr "مكتمل"
 
-#: .\projects\models.py:17
+#: .\projects\models.py:21
 msgid "postponed"
 msgstr "معلق"
 
-#: .\projects\models.py:18
+#: .\projects\models.py:22
 msgid "Canceled"
 msgstr "ملغي"
 
@@ -52,8 +52,8 @@ msgid "(c) 2023 ipo. ALL rights reserved."
 msgstr " جميع الحقوق محفوظة. bendy 2023"
 
 #: .\projects\templates\partials\header.html:5
-msgid "Time management for worship in Ramadan"
-msgstr "تنظيم وقت العبادة في رمضان"
+msgid "time management"
+msgstr "إدارة الوقت"
 
 #: .\projects\templates\partials\header.html:13
 msgid "Home"
@@ -80,10 +80,8 @@ msgid "Login"
 msgstr "تسجيل الدخول"
 
 #: .\projects\templates\project\create.html:8
-#: .\projects\templates\project\list.html:12
-#: .\projects\templates\project\list.html:55
-msgid "New Worship"
-msgstr "عبادة جديدة"
+msgid "Set a new time"
+msgstr "حدد وقتًا جديدًا"
 
 #: .\projects\templates\project\create.html:16
 msgid "Create"
@@ -103,16 +101,21 @@ msgid "Delete"
 msgstr "حذف"
 
 #: .\projects\templates\project\list.html:9
-msgid "My Worship"
-msgstr "عباداتي"
+msgid "my times"
+msgstr "وقتي"
+
+#: .\projects\templates\project\list.html:12
+#: .\projects\templates\project\list.html:55
+msgid "Create a new time"
+msgstr "أنشئ وقتًا جديدًا"
 
 #: .\projects\templates\project\list.html:38
 msgid "Edit"
 msgstr "تعديل"
 
 #: .\projects\templates\project\list.html:50
-msgid "Ther are no worship to show"
-msgstr "لا توجد اي عبادة لعرضها"
+msgid "No time has been set aside to display it"
+msgstr "لم تخصص وقت لعرضه"
 
 #: .\projects\templates\project\list.html:67
 #: .\projects\templates\project\list.html:72
@@ -135,3 +138,6 @@ msgstr "إضافة"
 #: .\projects\templates\project\update.html:39
 msgid "Save"
 msgstr "حفظ"
+
+#~ msgid "Ther are no worship to show"
+#~ msgstr "لا توجد اي عبادة لعرضها"

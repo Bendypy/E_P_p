@@ -8,7 +8,7 @@ class ProjectCreateForm(forms.ModelForm):#صرحنا عن الصنف والصن�
     class Meta:
         model = models.Project#النموزج  المستهدف
         fields = ['category', 'title', 'description']# الحقول المطلوبة
-        fields =  {
+        labels =  {
             'category': _('Category'),
             'title': _('Title'),
             'description': _('Description'),
@@ -16,7 +16,9 @@ class ProjectCreateForm(forms.ModelForm):#صرحنا عن الصنف والصن�
         widgets = {#خاصية لتحديد الحقول
             'category': forms.Select(attrs=attrs),
             'title': forms.TextInput(attrs=attrs),
-            'description': forms.Textarea(attrs=attrs)
+            'description': forms.Textarea(attrs=attrs),
+            
+            
         }
         
         
