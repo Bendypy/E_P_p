@@ -9,7 +9,7 @@
         <h3 class="me-auto">{% trans 'my times' %}</h3>
         <div>
             <a href="{% url 'Project_create' %}" class="btn btn-outline-success">
-                <i class="bi bi-plus-lg "></i> {% trans 'Create a new time' %}
+                <i class="bi bi-plus-lg "></i> {% trans 'أنشأ مشروع جديد' %}
             </a>
         </div>
     </div>
@@ -47,12 +47,12 @@
         {% empty %}
             <div class="col-md-12">
                 <div class="h-100 p-5 bg-white border rounded-3 text-center">
-                    <p>{% trans 'No time has been set aside to display it' %}</p>
+                    <p>{% trans 'No project has been assigned to be presented' %}</p>
                     <p>
                         <i class="bi bi-emoji-frown fs-1"></i>
                     </p>
                     <a href="{% url 'Project_create' %}"class="btn btn-outline-success">
-                        <i class="bi bi-plus-lg "></i> {% trans 'Create a new time' %}
+                        <i class="bi bi-plus-lg "></i> {% trans 'أنشأ مشروع جديد' %}
                     </a>
                 </div>
             </div>

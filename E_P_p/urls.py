@@ -18,11 +18,11 @@ from django.urls import path,  include
 import debug_toolbar
 from django.utils.translation import gettext as _
 
-admin.site.site_header = _('Managing the time of worship')
-admin.site.site_title = _('Managing the time of worship')
+admin.site.site_header = _('project management')
+admin.site.site_title = _('project management')
 urlpatterns = [
     path('__debug__/', include(debug_toolbar.urls)),
     path('', include('projects.urls')),
     path('accounts/', include('accounts.urls')),
-    path('admin/', admin.site.urls),
+    path('مح.منصةفنون.مد/', admin.site.urls),
 ]

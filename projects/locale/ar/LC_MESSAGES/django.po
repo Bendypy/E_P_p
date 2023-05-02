@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-20 21:06+0300\n"
+"POT-Creation-Date: 2023-05-02 22:03+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,9 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\projects\forms.py:12 .\projects\models.py:14
+#: .\projects\forms.py:12
 msgid "Category"
-msgstr "التصنيف"
+msgstr "المعلمين"
 
 #: .\projects\forms.py:13
 msgid "Title"
@@ -31,29 +31,45 @@ msgstr "العنوان"
 msgid "Description"
 msgstr "الوصف"
 
-#: .\projects\models.py:19
+#: .\projects\models.py:15 .\projects\models.py:16
+#, fuzzy
+#| msgid "the teacher"
+msgid "The teacher"
+msgstr "المعلمين"
+
+#: .\projects\models.py:20
 msgid "Pending"
 msgstr "قيد  التنفيذ"
 
-#: .\projects\models.py:20
+#: .\projects\models.py:21
 msgid "Completed"
 msgstr "مكتمل"
 
-#: .\projects\models.py:21
+#: .\projects\models.py:22
 msgid "postponed"
 msgstr "معلق"
 
-#: .\projects\models.py:22
+#: .\projects\models.py:23
 msgid "Canceled"
 msgstr "ملغي"
 
+#: .\projects\models.py:47 .\projects\models.py:48
+msgid "Project"
+msgstr "مشاريع"
+
+#: .\projects\models.py:60 .\projects\models.py:61
+#, fuzzy
+#| msgid "New Task"
+msgid "Task"
+msgstr "مهمة جديدة"
+
 #: .\projects\templates\partials\footer.html:5
 msgid "(c) 2023 ipo. ALL rights reserved."
-msgstr " جميع الحقوق محفوظة. bendy 2023"
+msgstr " جميع الحقوق محفوظة. منصة فنون 2023"
 
 #: .\projects\templates\partials\header.html:5
-msgid "time management"
-msgstr "إدارة الوقت"
+msgid "ادارة المشاريع"
+msgstr "ادارة المشاريع"
 
 #: .\projects\templates\partials\header.html:13
 msgid "Home"
@@ -80,8 +96,8 @@ msgid "Login"
 msgstr "تسجيل الدخول"
 
 #: .\projects\templates\project\create.html:8
-msgid "Set a new time"
-msgstr "حدد وقتًا جديدًا"
+msgid "Select New Project"
+msgstr "حدد مشروع جديد"
 
 #: .\projects\templates\project\create.html:16
 msgid "Create"
@@ -102,20 +118,20 @@ msgstr "حذف"
 
 #: .\projects\templates\project\list.html:9
 msgid "my times"
-msgstr "وقتي"
+msgstr "المشاريع"
 
 #: .\projects\templates\project\list.html:12
 #: .\projects\templates\project\list.html:55
-msgid "Create a new time"
-msgstr "أنشئ وقتًا جديدًا"
+msgid "أنشأ مشروع جديد"
+msgstr " إنشاء مشروع جديد"
 
 #: .\projects\templates\project\list.html:38
 msgid "Edit"
 msgstr "تعديل"
 
 #: .\projects\templates\project\list.html:50
-msgid "No time has been set aside to display it"
-msgstr "لم تخصص وقت لعرضه"
+msgid "No project has been assigned to be presented"
+msgstr "لم يتم انشاء أي مشروع لعرضه"
 
 #: .\projects\templates\project\list.html:67
 #: .\projects\templates\project\list.html:72
@@ -139,5 +155,21 @@ msgstr "إضافة"
 msgid "Save"
 msgstr "حفظ"
 
+#, fuzzy
+#~| msgid "time management"
+#~ msgid "project management"
+#~ msgstr "إدارة المشاريع"
+
+#, fuzzy
+#~| msgid "Create a new time"
+#~ msgid "Create a new project"
+#~ msgstr "أنشئ مشروعا جديدًا"
+
+#~ msgid "Set a new time"
+#~ msgstr "حدد مشروعا جديدًا"
+
+#~ msgid "No time has been set aside to display it"
+#~ msgstr "لم تخصص مشروعا لعرضه"
+
 #~ msgid "Ther are no worship to show"
-#~ msgstr "لا توجد اي عبادة لعرضها"
+#~ msgstr "لا توجد اي مهمة لعرضها"

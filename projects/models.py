@@ -10,9 +10,10 @@ class Category(models.Model): #هذا الصنف يرث من الصنق (models.
     def __str__(self):# هذه الدالة str تعيد لنا النتيجة عند تحويل الصنف الى سلسة نصية
         return self.name# يمكن ان نعيد الخاصية name الى سلسلة نصية
     
-class  Meta:
-    verbose_name = _('Category')    
-    
+
+    class  Meta:
+        verbose_name = _('المعلمين')    
+        verbose_name_plural = _('المعلمين') 
     
     
 class ProjectStatus(models.IntegerChoices):# نموزج مساعد  
@@ -42,6 +43,9 @@ class Project(models.Model):
     def __str__(self):# هذه الدالة str تنعيد لنا النتيجة عند تحويل الصنف الى سلسة نصية
         return self.title
     
+    class  Meta:
+        verbose_name = _('Project')    
+        verbose_name_plural = _('Project') 
     
     
 class Task(models.Model):#تصميم النموزج Task
@@ -52,7 +56,9 @@ class Task(models.Model):#تصميم النموزج Task
     def __str__(self):# هذه الدالة str تنعيد لنا النتيجة عند تحويل الصنف الى سلسة نصية
         return self.description
     
-    
+    class  Meta:
+        verbose_name = _('مهمات')    
+        verbose_name_plural = _('مهمات')
     
     
     
