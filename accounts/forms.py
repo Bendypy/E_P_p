@@ -30,7 +30,7 @@ class UserRegisterForm(UserCreationForm):
         label=_('First Name'),
         widget =forms.TextInput(attrs=attrs)
     )
-    last_neam = forms.CharField(
+    last_name = forms.CharField(
         label=_('Last Name'),
         widget=forms.TextInput(attrs=attrs)
     )
