@@ -5,7 +5,8 @@ from django.http.request import HttpRequest
 from . import models
 from django.utils.translation import gettext as _
 from django.db.models import Count
-
+from django.contrib import admin
+from .models import Report
 
 
 
@@ -44,6 +45,7 @@ class TaskAdmin(admin.ModelAdmin):
 
 
 
+admin.site.register(Report)
 
 
 

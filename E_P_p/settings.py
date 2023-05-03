@@ -80,6 +80,7 @@ WSGI_APPLICATION = 'E_P_p.wsgi.application'
 
 DATABASES = {
     'default': {
+        'DATABASE_URL':'postgresql://postgres:ZY5v9JRnY7Df4yEAcikN@containers-us-west-66.railway.app:6368/railway',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME':'E_P_p',
         'USER': 'postgres',

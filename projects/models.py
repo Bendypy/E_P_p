@@ -1,4 +1,5 @@
 from django.db import models
+
 from django.conf.global_settings import AUTH_USER_MODEL
 from django.utils.translation import gettext as _
 # Create your models here.
@@ -62,6 +63,14 @@ class Task(models.Model):#تصميم النموزج Task
     
     
     
+class Report(models.Model):
+    sender_email = models.EmailField()
+    recipient_email = models.EmailField()
+    report_text = models.TextField()
+    
 
     
-    
+    class Meta:
+        
+        verbose_name = 'ارسال التقارير'
+        verbose_name_plural = 'ارسال التقارير'

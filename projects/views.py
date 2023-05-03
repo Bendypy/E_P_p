@@ -4,7 +4,9 @@ from . import models
 from . import forms
 from django.contrib.auth.mixins import LoginRequiredMixin,  UserPassesTestMixin
 
-
+from django.core.mail import EmailMessage
+from django.shortcuts import render
+from .models import Report
 
 
 # Create your views here.
@@ -94,3 +96,20 @@ class TaskDeleteView(LoginRequiredMixin ,DeleteView):
     
     def get_success_url(self):
         return reverse('Project_update', args=[self.object.project.id])
+    
+    
+    
+def send_report(request):
+    if request.method == 'POST':
+        sender_email = request.POST['sender_email']
+        recipient_email = request.POST['recipient_email']
+        report_text = request.POST['report_text']
+        report = Report(sender_email=sender_email, recipient_email=recipient_email, report_text=report_text)
+        report.save()
+        subject = 'New Report'
+        body = 'Sender Email: {}\nReport Text: {}'.format(sender_email, report_text)
+        email = EmailMessage(subject, body, to=[recipient_email])
+        email.send()
+        return render(request, 'success.html')
+    else:
+        return render(request, 'send_report.html')
