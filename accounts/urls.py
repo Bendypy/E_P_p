@@ -11,3 +11,5 @@ urlpatterns = [
     path('profile/', edit_profile, name='profile'),
     path('', include('django.contrib.auth.urls'))
 ]
+
+

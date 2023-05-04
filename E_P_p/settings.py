@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,15 +82,19 @@ WSGI_APPLICATION = 'E_P_p.wsgi.application'
 
 DATABASES = {
     'default': {
-        'DATABASE_URL':'postgresql://postgres:ZY5v9JRnY7Df4yEAcikN@containers-us-west-66.railway.app:6368/railway',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'E_P_p',
-        'USER': 'postgres',
-        'PASSWORD' : 'E12983476E',
-        'HOST' : 'localhost',
-        'PORT' : ''
+        
+        
+        'DATABASE_URL':'postgres://artistic_creativity_center_user:6lQ9FIYVXY5kdetNJRQR8AuHQNJtLmXQ@dpg-cha05eik728r886cgkag-a.oregon-postgres.render.com/artistic_creativity_center',
+        'NAME':'Artistic_Creativity_Center',
+        'USER': 'artistic_creativity_center_user',
+        'PASSWORD': '6lQ9FIYVXY5kdetNJRQR8AuHQNJtLmXQ',
+        'HOST' : 'dpg-cha05eik728r886cgkag-a',
+        'PORT' : '5432'
     }
 }
+
+        
+    
 
 
 # Password validation

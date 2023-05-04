@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path,  include
 import debug_toolbar
 from django.utils.translation import gettext as _
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.site.site_header = _('project management')
 admin.site.site_title = _('project management')
 urlpatterns = [
@@ -26,3 +26,6 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('مح.منصةفنون.مد/', admin.site.urls),
 ]
+
+
+urlpatterns += staticfiles_urlpatterns()
