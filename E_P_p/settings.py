@@ -11,13 +11,15 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
+
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+import environ
+env = environ.Env()
 
-
+environ.Env.read_env()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -25,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x_74@(_6ldmg6ggt!=f)wol+*_yrp!*6-x$2ngeb7u8vhlmu5^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -80,20 +82,23 @@ WSGI_APPLICATION = 'E_P_p.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+#DATABASES = {
+ #   'default': {
+  #      
+   #     'DATABASE_URL':'postgresql://postgres:ZY5v9JRnY7Df4yEAcikN@containers-us-west-66.railway.app:6368/railway',
+    #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+     #   'NAME':'E_P_p',
+      #  'USER': 'postgres',
+       # 'PASSWORD' : 'E12983476E',
+       # 'HOST' : 'localhost',
+       # 'PORT' : ''
+    #}
+#}
+import dj_database_url
 DATABASES = {
-    'default': {
-        
-        'DATABASE_URL':'postgresql://postgres:ZY5v9JRnY7Df4yEAcikN@containers-us-west-66.railway.app:6368/railway',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'E_P_p',
-        'USER': 'postgres',
-        'PASSWORD' : 'E12983476E',
-        'HOST' : 'localhost',
-        'PORT' : ''
-    }
+    'default': dj_database_url.parse(env('DATABASE_URL'))
+    
 }
-
-        
     
 
 

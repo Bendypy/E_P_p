@@ -53,7 +53,7 @@ class ProjectUpdateView(LoginRequiredMixin,  UserPassesTestMixin, UpdateView):
     def get_success_url(self):
         return reverse('Project_update', args=[self.object.id]) 
     
-    python -m venv venv 
+    
 class ProjectDeleteView(LoginRequiredMixin,  UserPassesTestMixin, DeleteView):
     model = models.Project  
     template_name = 'project/delete.html'
