@@ -6,7 +6,7 @@ from django.utils.translation import gettext as _
 #الافضل البدء بل الكيانات التي لا تمتلك حقول  علاقات ضمنها
 #اذا نعرف صنف جديد يدعى 
 class Category(models.Model): #هذا الصنف يرث من الصنق (models.Modles
-    name = models.CharField(max_length=255)#الطول الاعظمي 255)#  احد حقول النموزج هذا الحقل اسم النموزج
+    name = models.CharField(max_length=255)#الطول الاعظم 255)#  احد حقول النموزج هذا الحقل اسم النموزج
     
     def __str__(self):# هذه الدالة str تعيد لنا النتيجة عند تحويل الصنف الى سلسة نصية
         return self.name# يمكن ان نعيد الخاصية name الى سلسلة نصية
@@ -74,3 +74,9 @@ class Report(models.Model):
         
         verbose_name = 'ارسال التقارير'
         verbose_name_plural = 'ارسال التقارير'
+        
+        
+        
+        
+        
+        

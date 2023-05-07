@@ -21,7 +21,8 @@ class ProjectListView(LoginRequiredMixin, ListView):
         where = {'user_id': self.request.user}
         q = self.request.GET.get('q', None)
         if q:
-            where['title__icontains'] = q
+            where['title__icontains'] =  q
+            
         return query_set.filter(**where)
         
     

@@ -1,23 +1,16 @@
-from typing import Any
+
 from django.contrib import admin
-from django.db.models.query import QuerySet
-from django.http.request import HttpRequest
 from . import models
 from django.utils.translation import gettext as _
 from django.db.models import Count
-from django.contrib import admin
 from .models import Report
 
 
 
 
-admin.site.register(models.Category)
-
-
-
-
-
-
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_per_page = 20
 
 @admin.register(models.Project)
 class ProjectAdmin(admin.ModelAdmin):
@@ -45,7 +38,7 @@ class TaskAdmin(admin.ModelAdmin):
 
 
 
-admin.site.register(Report)
+admin.register(models.Report)
 
 
 
